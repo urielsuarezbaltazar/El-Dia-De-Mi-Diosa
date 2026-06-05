@@ -1,0 +1,182 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#020617;
+color:white;
+font-family:Georgia,serif;
+overflow-x:hidden;
+}
+
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+#intro{
+position:fixed;
+inset:0;
+background:#020617;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+transition:2s;
+z-index:100;
+}
+
+.intro-content h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.intro-content h2{
+font-size:2rem;
+margin-bottom:40px;
+color:#8fd3ff;
+}
+
+#startBtn{
+padding:18px 40px;
+border:none;
+font-size:1.1rem;
+cursor:pointer;
+border-radius:40px;
+background:#0ea5e9;
+color:white;
+}
+
+.fade-out{
+opacity:0;
+visibility:hidden;
+}
+
+#content{
+display:none;
+max-width:900px;
+margin:auto;
+padding:100px 25px;
+}
+
+.chapter{
+margin:120px 0;
+}
+
+.chapter h2{
+text-align:center;
+margin-bottom:50px;
+font-size:2rem;
+color:#8fd3ff;
+}
+
+.chapter p{
+line-height:2;
+font-size:1.2rem;
+margin:20px 0;
+}
+
+.separator{
+font-size:5rem;
+text-align:center;
+color:#7dd3fc;
+animation:starFloat 6s infinite ease-in-out;
+text-shadow:0 0 30px #38bdf8;
+}
+
+@keyframes starFloat{
+50%{
+transform:translateY(-10px);
+}
+}
+
+.glow-word{
+animation:glowWord 4s infinite;
+color:#9edbff;
+}
+
+@keyframes glowWord{
+
+0%,100%{
+opacity:.8;
+text-shadow:0 0 5px #8fd3ff;
+}
+
+50%{
+opacity:1;
+text-shadow:
+0 0 10px #8fd3ff,
+0 0 20px #8fd3ff,
+0 0 30px #8fd3ff;
+}
+}
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1.5s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.tribute{
+text-align:center;
+font-size:1.8rem;
+margin:80px 0;
+line-height:2;
+animation:tributeGlow 5s infinite;
+}
+
+@keyframes tributeGlow{
+
+50%{
+text-shadow:
+0 0 15px #8fd3ff,
+0 0 30px #8fd3ff;
+}
+}
+
+#ending{
+text-align:center;
+padding:150px 0;
+}
+
+.heart{
+font-size:5rem;
+opacity:0;
+animation:appear 3s forwards;
+animation-delay:2s;
+}
+
+.final-line{
+font-size:2rem;
+margin-top:30px;
+opacity:0;
+animation:appear 3s forwards;
+animation-delay:5s;
+}
+
+.final-name{
+font-size:4rem;
+color:#7dd3fc;
+margin-top:40px;
+opacity:0;
+text-shadow:
+0 0 20px #38bdf8,
+0 0 50px #38bdf8;
+animation:appear 3s forwards;
+animation-delay:8s;
+}
+
+@keyframes appear{
+to{
+opacity:1;
+}
+}

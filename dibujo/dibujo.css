@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #10243f 0%,
+        #08111f 35%,
+        #000000 100%
+    );
+
+    color:white;
+
+    font-family:
+    "Segoe UI",
+    sans-serif;
+
+    overflow-x:hidden;
+}
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(
+        rgba(120,220,255,.08),
+        transparent 70%
+    );
+
+    pointer-events:none;
+}
+
+.music-btn{
+
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:
+    rgba(0,255,255,.12);
+
+    color:#9defff;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.music-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 15px rgba(0,255,255,.4);
+}
+
+.container{
+
+    width:min(1000px,90%);
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.drawing{
+
+    width:min(850px,95%);
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px rgba(0,255,255,.15),
+    0 0 80px rgba(0,255,255,.08);
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:
+    appear 2s ease forwards;
+}
+
+.message{
+
+    max-width:800px;
+
+    margin-top:50px;
+
+    opacity:0;
+
+    animation:
+    appear 2s ease forwards;
+
+    animation-delay:1s;
+}
+
+.message h1{
+
+    color:#9defff;
+
+    margin-bottom:25px;
+
+    font-weight:300;
+
+    text-shadow:
+    0 0 12px rgba(157,239,255,.5);
+}
+
+.message p{
+
+    line-height:1.9;
+
+    font-size:1.2rem;
+
+    margin-bottom:20px;
+}
+
+.love{
+
+    color:#9defff;
+
+    font-size:1.4rem;
+
+    text-shadow:
+    0 0 10px rgba(157,239,255,.5);
+
+    animation:
+    pulse 3s infinite;
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.5;
+    }
+
+    50%{
+
+        opacity:1;
+    }
+
+    100%{
+
+        opacity:.5;
+    }
+}

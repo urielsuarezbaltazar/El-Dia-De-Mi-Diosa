@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:
+    radial-gradient(circle at top,
+    #0f172a,
+    #050816,
+    #000);
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+.stars{
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+    radial-gradient(#7dd3fc 1px, transparent 1px);
+
+    background-size:120px 120px;
+
+    opacity:.15;
+
+    z-index:-1;
+}
+
+header{
+
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+header h1{
+
+    font-size:4rem;
+
+    color:#7dd3fc;
+
+    text-shadow:
+    0 0 20px #7dd3fc;
+}
+
+header p{
+
+    margin-top:20px;
+
+    font-size:1.3rem;
+
+    opacity:.8;
+}
+
+.musicBtn,
+#musicBtn{
+
+    position:fixed;
+
+    top:20px;
+    right:20px;
+
+    background:#111827;
+
+    border:1px solid #7dd3fc;
+
+    color:#7dd3fc;
+
+    padding:10px 18px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    z-index:100;
+}
+
+.timeline{
+
+    width:min(900px,90%);
+
+    margin:auto;
+}
+
+.photo-section{
+
+    text-align:center;
+
+    margin:80px 0;
+}
+
+.photo{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:20px;
+
+    border:2px solid rgba(125,211,252,.3);
+
+    box-shadow:
+    0 0 30px rgba(125,211,252,.25);
+}
+
+.photo-section h2{
+
+    margin-top:20px;
+
+    color:#7dd3fc;
+}
+
+.line{
+
+    width:4px;
+
+    height:120px;
+
+    margin:auto;
+
+    background:
+    linear-gradient(
+    #7dd3fc,
+    #f9a8d4
+    );
+
+    box-shadow:
+    0 0 15px #7dd3fc;
+}
+
+.event{
+
+    text-align:center;
+
+    margin:50px 0;
+}
+
+.event span{
+
+    font-size:2rem;
+
+    color:#f9a8d4;
+}
+
+.event p{
+
+    margin-top:10px;
+
+    font-size:1.4rem;
+}
+
+.final{
+
+    text-align:center;
+
+    margin:120px 0;
+}
+
+.final h2{
+
+    color:#7dd3fc;
+
+    margin-bottom:25px;
+}
+
+.final p{
+
+    margin-bottom:15px;
+
+    font-size:1.3rem;
+}
+
+.heart{
+
+    font-size:4rem;
+
+    margin-top:40px;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s;
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
