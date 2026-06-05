@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(125,211,252,0.12),
+    transparent 30%),
+
+    #05070d;
+
+    color:white;
+
+    font-family:"Segoe UI",sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.background-glow{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,182,193,0.05),
+    transparent 60%);
+
+    pointer-events:none;
+}
+
+.container{
+
+    text-align:center;
+    z-index:10;
+}
+
+h1{
+
+    margin-bottom:40px;
+
+    color:#7dd3fc;
+
+    font-weight:300;
+
+    text-shadow:
+    0 0 15px rgba(125,211,252,0.3);
+}
+
+#plant-container{
+
+    min-height:220px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.plant{
+
+    font-size:4rem;
+
+    cursor:pointer;
+
+    transition:all 0.8s ease;
+}
+
+.ground{
+
+    margin-top:5px;
+
+    font-size:2rem;
+}
+
+.hidden{
+    opacity:0;
+}
+
+#message{
+
+    margin-top:35px;
+
+    font-size:1.2rem;
+
+    color:#d1d5db;
+
+    max-width:600px;
+}
+
+.bloom{
+
+    animation:bloom 2s infinite ease-in-out;
+}
+
+@keyframes bloom{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.final-text{
+
+    animation:fadeIn 3s forwards;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* pétalos */
+
+.petal{
+
+    position:fixed;
+
+    font-size:24px;
+
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-50px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
